@@ -1,0 +1,19 @@
+<apex:page controller="AccountOppCont">
+<apex:form >
+    <apex:pageBlock title="Enter Opportunity Details" tabStyle="Opportunity">
+        <apex:pageBlockButtons location="bottom" >
+            <apex:commandButton value="Save" action="{!OppNext}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Opportunity Information-GETTER" rendered="{!isShow}">
+            <apex:inputField value="{!o.Name}"/>
+            <apex:inputField value="{!o.CloseDate}"/>
+            <apex:inputField value="{!o.StageName}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Opportunity Information-GETTER SETTER" rendered="{!isShow2}">
+            <apex:inputField value="{!oppProp.Name}"/>
+            <apex:inputField value="{!oppProp.CloseDate}"/>
+            <apex:inputField value="{!oppProp.StageName}"/>
+        </apex:pageBlockSection>        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

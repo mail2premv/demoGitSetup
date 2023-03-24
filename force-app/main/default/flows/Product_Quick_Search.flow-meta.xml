@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <choices>
+        <name>Assembly_System</name>
+        <choiceText>Assembly System</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>CloudyBot</name>
+        <choiceText>CloudyBot</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <choices>
+        <name>RainbowBot</name>
+        <choiceText>RainbowBot</choiceText>
+        <dataType>String</dataType>
+    </choices>
+    <interviewLabel>Product Quick Search {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Product Quick Search</label>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Search_Products</name>
+        <label>Search Products</label>
+        <locationX>330</locationX>
+        <locationY>131</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Show_Products</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>Contains</operator>
+            <value>
+                <elementReference>Product_type</elementReference>
+            </value>
+        </filters>
+        <object>Product2</object>
+        <outputAssignments>
+            <assignToReference>ProductID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ProductName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <screens>
+        <name>Product_Typee</name>
+        <label>Product Type</label>
+        <locationX>154</locationX>
+        <locationY>132</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Search_Products</targetReference>
+        </connector>
+        <fields>
+            <name>Product_type</name>
+            <choiceReferences>RainbowBot</choiceReferences>
+            <choiceReferences>CloudyBot</choiceReferences>
+            <choiceReferences>Assembly_System</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Product Type</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Show_Products</name>
+        <label>Show Products</label>
+        <locationX>493</locationX>
+        <locationY>129</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Products</name>
+            <fieldText>{!ProductID}{!ProductName}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Product_Typee</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>ProductID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ProductName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

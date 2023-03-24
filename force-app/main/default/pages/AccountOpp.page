@@ -1,0 +1,21 @@
+<apex:page controller="AccountOppCont">
+<apex:form >
+    <apex:pageBlock title="Enter Account Details" TabStyle="Account">
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Next" action="{!AccNext}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Company Information-Getter" rendered="{!isShow}">
+            <apex:inputField value="{!A.Name}"/>
+            <apex:inputField value="{!A.AccountNumber}"/>
+            <apex:inputField value="{!A.Phone}"/>
+            <apex:inputField value="{!A.Type}"/>
+        </apex:pageBlockSection>      
+       <apex:pageBlockSection title="Company Information-Getter Setter" rendered="{!isShow2}">
+            <apex:inputField value="{!accProp.Name}"/>
+            <apex:inputField value="{!accProp.AccountNumber}"/>
+            <apex:inputField value="{!accProp.Phone}"/>
+            <apex:inputField value="{!accProp.Type}"/>
+        </apex:pageBlockSection>      
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

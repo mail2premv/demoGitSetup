@@ -1,0 +1,75 @@
+<apex:page standardController="Contact" recordSetVar="con">
+    <style>
+        .one{width:100px}
+    </style>
+    <!--Iteration Components for pulling data from database
+        1. PageBlock Table
+        2. Data Table
+        3. Data List
+        4. Repeat
+    -->
+    <apex:sectionHeader title="Iteration"/>
+    <apex:tabPanel >
+        <apex:tab label="Page Block Table" labelWidth="200">
+            <apex:pageBlock title="PageBlockTable"  >
+                <apex:PageBlockTable value="{!con}" var="c">
+                    <apex:column headerValue="First Name" footerValue="First Name">
+                        <!--apex:outputLink value="/apex/ContactView?id={!c.Id}" target="_Blank"-->
+                        <apex:outputLink value="/apex/ContactView" target="_Blank">
+                            <apex:OutputText value="{!c.FirstName}"/>
+                            <apex:param name="id" value="{!c.id}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="Last Name" footerValue="Last Name">
+                        <apex:OutputText value="{!c.LastName}"/>
+                    </apex:column>
+                    <apex:column headerValue="Date of Birth" footerValue="Date of Birth">
+                        <apex:OutputField value="{!c.Birthdate}"/>
+                    </apex:column>
+                </apex:PageBlockTable>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="Data Table" labelWidth="200">
+            <apex:pageBlock title="Data Table" >
+                <apex:dataTable value="{!con}" var="c" width="1000">
+                    <apex:column value="{!c.FirstName}" headerValue="First Name"/>
+                    <apex:column value="{!c.LastName}" headerValue="Last Name"/>
+                    <apex:column value="{!c.Birthdate}" headerValue="Date of Birth"/>
+                </apex:dataTable>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="Data List" labelWidth="200">
+            <apex:pageBlock title="Data List" >
+                <table width="100%">  
+                    <apex:dataList value="{!con}" var="c" style="list-style:none;">
+                        <apex:panelGrid columns="3" width="200" columnClasses="one">
+                            <apex:panelGroup >
+                                <apex:outputText value="{!c.FirstName}"/>
+                            </apex:panelGroup>
+                            <apex:panelGroup >
+                                <apex:outputText value="{!c.LastName}"/>
+                            </apex:panelGroup>
+                            <apex:panelGroup >
+                                <apex:outputField value="{!c.Birthdate}"/>
+                            </apex:panelGroup>
+                        </apex:panelGrid>
+                    </apex:dataList>
+                </table>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="Repeat" labelWidth="200">
+            <apex:pageBlock title="Repeat">
+                <table width="30%">
+                    <colgroup span="3" width="20%"/>
+                    <apex:repeat value="{!con}" var="c">
+                        <tr>
+                            <td><apex:outputText value="{!c.FirstName}" /></td>
+                            <td><apex:outputText value="{!c.LastName}"/></td>
+                            <td><apex:outputField value="{!c.Birthdate}"/></td>>
+                        </tr>
+                    </apex:repeat>
+                </table>
+            </apex:pageBlock>
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

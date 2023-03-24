@@ -1,0 +1,42 @@
+<apex:page controller="AccountOppCont">
+<apex:form >
+    <apex:pageBlock title="Review Details" TabStyle="Account">
+        <apex:pageBlockButtons location="bottom" >
+            <apex:CommandButton value="Save" action="{!Review}"/>
+        </apex:pageBlockButtons>
+        <apex:inlineEditSupport />
+        <apex:pageBlockSection title="Account Information-GETTER" rendered="{!isShow}">
+            <apex:outputField value="{!A.Name}"/>
+            <apex:outputField value="{!A.AccountNumber}"/>
+            <apex:outputField value="{!A.Phone}"/>
+            <apex:outputField value="{!A.Type}"/>
+        </apex:pageBlockSection>
+       <apex:pageBlockSection title="Company Information-GETTER SETTER" rendered="{!isShow2}">
+            <apex:outputField value="{!accProp.Name}"/>
+            <apex:outputField value="{!accProp.AccountNumber}"/>
+            <apex:outputField value="{!accProp.Phone}"/>
+            <apex:outputField value="{!accProp.Type}"/>
+        </apex:pageBlockSection>         
+        <apex:pageBlockSection Title="Contact Information-GETTER" rendered="{!isShow}">
+            <apex:outputField value="{!c.FirstName}"/>
+            <apex:outputField value="{!c.LastName}"/>
+            <apex:outputField value="{!c.Email}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="Contact Information-GETTER SETTER" rendered="{!isShow2}">
+            <apex:outputField value="{!conProp.FirstName}"/>
+            <apex:outputField value="{!conProp.LastName}"/>
+            <apex:outputField value="{!conProp.Email}"/>
+        </apex:pageBlockSection>         
+            <apex:pageBlockSection title="Opportunity Information-GETTER" rendered="{!isShow}">
+                <apex:outputField value="{!o.Name}"/>
+                <apex:outputField value="{!o.CloseDate}"/>
+                <apex:outputField value="{!o.StageName}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Opportunity Information-GETTER SETTER" rendered="{!isShow2}">
+            <apex:outputField value="{!oppProp.Name}"/>
+            <apex:outputField value="{!oppProp.CloseDate}"/>
+            <apex:outputField value="{!oppProp.StageName}"/>
+        </apex:pageBlockSection>        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

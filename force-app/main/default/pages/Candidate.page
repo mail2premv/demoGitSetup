@@ -1,0 +1,9 @@
+<apex:page controller="CandidateCont">
+<apex:form >
+<apex:pageBlock title="Account Details">
+    <apex:pageBlockSection title="Account Information">
+        <apex:inputField value="{!A.Name}"/>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

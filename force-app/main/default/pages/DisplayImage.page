@@ -1,0 +1,10 @@
+<apex:page showHeader="false">
+<apex:pageBlock >
+<apex:pageBlockSection title="Display Image">
+<!--apex:image url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"/-->
+    <apex:image id="theImage" value="https://developer.salesforce.com/files/salesforce-developer-network-logo.png" 
+    width="220" height="55" alt="Description of image here"/>
+The example above renders the following HTML:
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

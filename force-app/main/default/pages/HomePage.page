@@ -1,0 +1,11 @@
+<apex:page controller="HomeCtrl">
+<apex:form >
+    <apex:SelectRadio value="{!option}">
+        <apex:SelectOption itemLabel="Method1" itemValue="Method1"/>
+        <apex:SelectOption itemLabel="Method2" itemValue="Method2"/>
+        <!--apex:selectOptions value="{!opt}"/-->
+        <apex:actionSupport event="onchange" action="{!proceed}"/>
+    </apex:SelectRadio>
+    <!--apex:commandButton value="Proceed" action="{!Proceed}"/-->
+</apex:form>
+</apex:page>

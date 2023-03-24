@@ -1,0 +1,17 @@
+<apex:page sidebar="false" showHeader="false" renderAs="PDF">
+    <head>
+        <style><!--Internal Style Sheet-->
+            p{font-size:14px; color:orange;}
+        </style>
+    </head>
+    <apex:stylesheet value="{!$Resource.ExternalStyles}"/> <!--In order use binding operation-->
+    <!--Inline Style Sheet-->
+    <center>
+        <h1 style="font-size: 20px;color:blue;">Candidate Registration Confirmation Page</h1>
+    </center>
+    <p>Personal Information</p>
+    <p>Communication Details</p>
+    <h4>Education Details</h4><br/><br/>
+    <h4 class="one">Certification Details</h4><br/><br/>
+    <h4 id="two">Employment Details</h4>
+</apex:page>

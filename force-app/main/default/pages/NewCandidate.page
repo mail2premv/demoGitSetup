@@ -1,0 +1,14 @@
+<apex:page standardController="Suggestion__c" sidebar="false">
+<apex:form >
+<apex:pageBlock title="Suggestion Details">
+    <apex:pageblockButtons location="bottom">
+        <apex:commandButton value="Save" action="{!save}"/>
+    </apex:pageblockButtons>
+    <apex:PageBlockSection title="Personal Details">
+        <apex:inputField value="{!Suggestion__c.Implemented_Date__c}" label="Imp. Date" required="true"/>
+        
+   
+    </apex:PageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

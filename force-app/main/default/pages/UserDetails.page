@@ -1,0 +1,28 @@
+<apex:page tabStyle="Contact">
+    <apex:sectionHeader title="{!$User.FirstName}" subtitle="User" description="User Complete Details" help="/apex/MyTestPage"/>
+    <apex:pageBlock title="User Details" tabStyle="Contact">
+        <apex:pageBlockSection title="Personal Information" collapsible="false">
+            <apex:outputText value="{!$User.FirstName}" label="First Name"/>
+            <apex:outputText value="{!$User.LastName}" label="Last Name"/>
+            <apex:outputText value="{!$User.Email}" label="Email"/>
+            <apex:outputText value="{!$User.Phone}" label="Phone"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Communication Details">
+            <apex:outputText value="{!$User.City}" label="City"/>
+            <apex:outputText value="{!$User.Country}" label="Country"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="Organization Details" tabStyle="Account">
+        <apex:pageBlockSection title="Company Information">
+            <apex:outputText value="{!$Organization.Name}" label="Organization Name"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Profile Details">
+            <apex:outputText value="{!$Profile.Name}" label="Profile Name"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Role Information">
+            <apex:outputText value="{!$UserRole.Name}" label="User Role"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="">
+    </apex:pageBlock>
+</apex:page>

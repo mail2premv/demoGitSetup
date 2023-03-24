@@ -1,0 +1,20 @@
+<apex:page controller="AccountOppCont">
+<apex:form >
+    <apex:pageBlock title="Enter Contact Detials" tabStyle="Contact">
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Next" action="{!ConNext}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection Title="Contact Information-GETTER" rendered="{!isShow}">
+            <apex:inputField value="{!c.FirstName}"/>
+            <apex:inputField value="{!c.LastName}"/>
+            <apex:inputField value="{!c.Email}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="Contact Information-GETTER SETTER" rendered="{!isShow2}">
+            <apex:inputField value="{!conProp.FirstName}"/>
+            <apex:inputField value="{!conProp.LastName}"/>
+            <apex:inputField value="{!conProp.Email}"/>
+        </apex:pageBlockSection>        
+    </apex:pageBlock>
+</apex:form>
+
+</apex:page>

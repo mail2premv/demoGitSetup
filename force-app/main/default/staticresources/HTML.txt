@@ -1,0 +1,82 @@
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="responsive" id="body-section" width="740">
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#EEEEEE" valign="top">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="responsiveInner" style="width: 640px" width="640">
+				<tbody>
+					<tr>
+						<td align="center" style="padding-top: 30px; padding-bottom: 30px" valign="top">
+						<table align="center" bgcolor="#EEEEEE" border="0" cellpadding="0" cellspacing="0" class="w100" dir="ltr" style="direction: ltr;" width="640">
+							<tbody>
+								<tr>
+									<td align="center" valign="top">
+									<table align="center" bgcolor="#00183e" border="0" cellpadding="0" cellspacing="0" class="w100" style="width:640px; font-family:Arial, Helvetica, sans-serif; background-color:#FFFFFF;" width="640">
+										<tbody>
+											<tr>
+												<td class="w100" height="30" style="height:30px; font-size:30px; line-height:30px; mso-line-height-rule:exactly;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td>
+												<table align="center" border="0" cellpadding="0" cellspacing="0" class="w85 cntr" style="width: 560px; text-align: center;" width="560">
+													<tbody>
+														<tr>
+															<td align="left" dir="ltr" style="direction:ltr;">
+															<table border="0" cellpadding="0" cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td height="20" style="height:20px; font-size:20px; line-height:20px; mso-line-height-rule:exactly;">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															<font dir="ltr" style="font-family:SST, Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#363636;">Salutation<br />
+															<br />
+															Body 1<br />
+															<br />
+															Body2<br />
+															<br />
+															Body3<br />
+															<br />
+															<br />
+															Thank you!<br />
+															<br />
+															Play Station Support Team </font> <font dir="ltr" style="font-family:SST, Arial, Helvetica, sans-serif; font-size:10px; line-height:14px; color:#363636; direction:ltr;"> </font>
+															<table border="0" cellpadding="0" cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td height="30" style="height:30px; font-size:30px; line-height:30px; mso-line-height-rule:exactly;">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+											<tr>
+												<td class="w100" height="40" style="height:40px; font-size:40px; line-height:40px; mso-line-height-rule:exactly;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td bgcolor="#eeeeee" class="w100" height="40" style="height:40px; background-color: #eeeeee; font-size:40px; line-height:40px; mso-line-height-rule:exactly;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
